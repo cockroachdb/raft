@@ -50,6 +50,10 @@ func (env *InteractionEnv) handleAddNodes(t *testing.T, d datadriven.TestData) e
 				arg.Scan(t, i, &snap.Data)
 			case "async-storage-writes":
 				arg.Scan(t, i, &cfg.AsyncStorageWrites)
+			case "max-committed-size-per-ready":
+				arg.Scan(t, i, &cfg.MaxCommittedSizePerReady)
+			case "disable-conf-change-validation":
+				arg.Scan(t, i, &cfg.DisableConfChangeValidation)
 			}
 		}
 	}
